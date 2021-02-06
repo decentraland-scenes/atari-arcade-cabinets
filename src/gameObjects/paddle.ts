@@ -4,7 +4,7 @@ import { CollisionFlag } from "../gameLogic/collision"
 export class PaddleFlag {}
 
 export class Paddle extends Entity {
-  constructor(transform: Transform, color: Color3, parent) {
+  constructor(transform: Transform, color: Color3, parent: Entity) {
     super()
     engine.addEntity(this)
     this.addComponent(transform)
