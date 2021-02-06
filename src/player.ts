@@ -1,5 +1,5 @@
 import { Paddle } from "./gameObjects/paddle"
-import { Ball, BallFlag } from "./gameObjects/ball"
+import { Ball } from "./gameObjects/ball"
 import { GameManager } from "./gameManager"
 import { Arcade } from "./gameObjects/arcade"
 
