@@ -399,8 +399,8 @@ export function loadEthereumBricks(parent: Entity): void {
 }
 
 export function unloadEthereumBricks(): void {
+  readyPlayerOne.getComponent(GLTFShape).visible = true
   while (gameElements.length) {
-    readyPlayerOne.getComponent(GLTFShape).visible = true
     let gameElement = gameElements.pop()
     engine.removeEntity(gameElement)
   }
