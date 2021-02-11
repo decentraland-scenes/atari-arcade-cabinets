@@ -7,8 +7,14 @@ import { loadEthereumLevel, loadEthereumBricks, unloadEthereumBricks } from "./g
 import { loadDecentralandLevel, loadDecentralandBricks, unloadDecentralandBricks } from "./gameLogic/decentralandLevel"
 import { GameManager } from "./gameManager"
 
+// Base
+const base = new Entity()
+base.addComponent(new GLTFShape("models/baseLight.glb"))
+base.addComponent(new Transform({ scale: new Vector3(2, 1, 2) }))
+engine.addEntity(base)
+
 // Atari arcade cabinet
-const arcadeCabinetAtari = new Arcade(new GLTFShape("models/arcadeCabinetAtari.glb"), new Transform({ position: new Vector3(16, 0, 16) }))
+const arcadeCabinetAtari = new Arcade(new GLTFShape("models/arcadeCabinetAtari.glb"), new Transform({ position: new Vector3(16, 0.1, 16) }))
 
 // Breakout atari
 const atariGameTransform = new Entity()
@@ -38,7 +44,7 @@ arcadeCabinetAtari.addComponent(
 )
 
 // Bitcoin arcade cabinet
-const arcadeCabinetBitcoin = new Arcade(new GLTFShape("models/arcadeCabinetBitcoin.glb"), new Transform({ position: new Vector3(18, 0, 18) }))
+const arcadeCabinetBitcoin = new Arcade(new GLTFShape("models/arcadeCabinetBitcoin.glb"), new Transform({ position: new Vector3(18, 0.1, 18) }))
 arcadeCabinetBitcoin.getComponent(Transform).rotate(Vector3.Up(), -90)
 
 // Breakout bitcoin
@@ -69,7 +75,7 @@ arcadeCabinetBitcoin.addComponent(
 )
 
 // Ethereum arcade cabinet
-const arcadeCabinetEthereum = new Arcade(new GLTFShape("models/arcadeCabinetEthereum.glb"), new Transform({ position: new Vector3(16, 0, 20) }))
+const arcadeCabinetEthereum = new Arcade(new GLTFShape("models/arcadeCabinetEthereum.glb"), new Transform({ position: new Vector3(16, 0.1, 20) }))
 arcadeCabinetEthereum.getComponent(Transform).rotate(Vector3.Up(), 180)
 
 // Breakout ethereum
@@ -100,7 +106,7 @@ arcadeCabinetEthereum.addComponent(
 )
 
 // Decentraland arcade cabinet
-const arcadeCabinetDecentraland = new Arcade(new GLTFShape("models/arcadeCabinetDecentraland.glb"), new Transform({ position: new Vector3(14, 0, 18) }))
+const arcadeCabinetDecentraland = new Arcade(new GLTFShape("models/arcadeCabinetDecentraland.glb"), new Transform({ position: new Vector3(14, 0.1, 18) }))
 arcadeCabinetDecentraland.getComponent(Transform).rotate(Vector3.Up(), 90)
 
 // Breakout decentraland
