@@ -861,6 +861,7 @@ const bricks = [
   { position: new Vector3(brickOffsetX + brickSize * 20, GameManager.PLANE_HEIGHT, brickOffsetZ - brickSize * 31), color: colorOrange },
 ]
 
+// Load level
 export function loadBitcoinLevel(parent: Entity): void {
 
   readyPlayerOne.setParent(parent)

@@ -1,4 +1,4 @@
-import utils from "../node_modules/decentraland-ecs-utils/index"
+import * as utils from "@dcl/ecs-scene-utils"
 import { Arcade } from "./gameObjects/arcade"
 import { loadPlayer, unloadPlayer } from "./player"
 import { loadAtariLevel, loadAtariBricks, unloadAtariBricks } from "./gameLogic/atariLevel"

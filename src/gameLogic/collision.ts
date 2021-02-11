@@ -2,15 +2,15 @@ import { Ball, BallFlag } from "../gameObjects/ball"
 import { BrickFlag } from "../gameObjects/brick"
 import { PaddleFlag } from "../gameObjects/paddle"
 import { Sound } from "../gameObjects/sound"
-import utils from "../../node_modules/decentraland-ecs-utils/index"
 import { Wall, WallFlag } from "../gameObjects/wall"
+import * as utils from "@dcl/ecs-scene-utils"
 
 @Component("collisionFlag")
 export class CollisionFlag {}
 
 const hitSound = new Sound(new AudioClip("sounds/hit.mp3"))
 
-// Collision detection
+// 2D collision detection
 class CollisionDetection {
   private ballGroup = engine.getComponentGroup(BallFlag)
   private collisionGroup = engine.getComponentGroup(CollisionFlag)

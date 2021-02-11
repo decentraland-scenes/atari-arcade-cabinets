@@ -8,18 +8,22 @@ const input = Input.instance
 let buttonSystem: ISystem
 let paddle: Paddle
 let activeParent: Entity
+
 // To store player elements to load and unload
 const playerElements: Entity[] = []
 
 export function loadPlayer(parent: Entity, arcade: Arcade): void {
-
   activeParent = parent
-  
+
   // Game has loaded
   GameManager.hasGameLoaded = true
 
   // Paddle
-  paddle = new Paddle(new Transform({ position: new Vector3(16, GameManager.PLANE_HEIGHT, 4), scale: new Vector3(2, 0.01, 1) }), Color3.FromInts(127, 127, 255), activeParent)
+  paddle = new Paddle(
+    new Transform({ position: new Vector3(16, GameManager.PLANE_HEIGHT, 4), scale: new Vector3(2, 0.01, 1) }),
+    Color3.FromInts(127, 127, 255),
+    activeParent
+  )
   playerElements.push(paddle)
 
   // Fire a ball

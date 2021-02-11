@@ -13,6 +13,7 @@ const colorRed = Color3.FromInts(255, 127, 0)
 const colorGreen = Color3.FromInts(127, 255, 127)
 const gameElements: Entity[] = []
 
+// Load level
 export function loadAtariLevel(parent: Entity): void {
   readyPlayerOne.setParent(parent)
 

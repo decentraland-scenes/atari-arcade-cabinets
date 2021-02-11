@@ -5,6 +5,7 @@ import { GameManager } from "../gameManager"
 // Sound
 const missSound = new Sound(new AudioClip("sounds/miss.mp3"))
 
+// Translate ball based on its direction property
 class BallTranslatorSystem {
   private ballGroup = engine.getComponentGroup(BallFlag)
 

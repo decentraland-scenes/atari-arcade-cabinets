@@ -6,7 +6,7 @@ import { GameManager } from "../gameManager"
 // Ready player one
 const readyPlayerOne = new Entity()
 readyPlayerOne.addComponent(new GLTFShape("models/readyPlayerOne.glb"))
-readyPlayerOne.addComponent(new Transform({ position: new Vector3(16, 1, 16)}))
+readyPlayerOne.addComponent(new Transform({ position: new Vector3(16, 1, 16) }))
 
 // Setup
 const gameElements: Entity[] = []
@@ -362,8 +362,8 @@ const bricks = [
   { position: new Vector3(brickOffsetX + brickSize * 17, GameManager.PLANE_HEIGHT, brickOffsetZ - brickSize * 30), color: ethMid },
 ]
 
+// Load level
 export function loadEthereumLevel(parent: Entity): void {
-
   readyPlayerOne.setParent(parent)
 
   // Wall
